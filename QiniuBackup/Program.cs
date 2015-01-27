@@ -35,6 +35,7 @@ namespace QiniuBackup
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
+                Console.ReadKey(true);
             }
         }
 
