@@ -27,6 +27,23 @@ namespace QiniuBackup
             // 读取配置文件
             Config = ConfigurationManager.AppSettings;
 
+            // 全局异常捕捉
+            try
+            {
+                Execute();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+
+        /// <summary>
+        /// 运行
+        /// </summary>
+        static void Execute()
+        {
             // 欢迎界面
             Console.WriteLine("========================================");
             Console.WriteLine("欢迎使用 Qiniu Backup 七牛备份工具");
